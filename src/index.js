@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import name from './name'
 
 const myFirstElement = (<h1>Hello React!</h1> );
 
 const myElement = (
-    <table >
+    <table className="eleclass">
         <tr>
             <th>Name</th>
         </tr>
@@ -16,6 +17,10 @@ const myElement = (
         </tr>
     </table>
 );
+
+
+
+ReactDOM.render(<p>My name is : {name}</p>, document.getElementById('root4'));
 
 ReactDOM.render(myFirstElement, document.getElementById('root'));
 ReactDOM.render(<p>Hello</p>, document.getElementById('root2'));
