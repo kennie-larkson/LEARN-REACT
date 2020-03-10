@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import name from './name'
 import myFruits from './fruits';
 import Car from './car';
+import Garage from './doublecomponents';
+import Vehicle from './reactstate'
+import NewVehicle from './changestate'
+// import Garage from './doublecomponents'
 
 // const myFirstElement = (<h1>Hello React!</h1> );
 
@@ -31,9 +35,9 @@ ReactDOM.render(<p>Hello</p>, document.getElementById('root2'));
 ReactDOM.render(myElement, document.getElementById('root3'));
 ReactDOM.render(myFruits, document.getElementById('fruits'));
 ReactDOM.render(<p>This is another car instance<Car/></p>, document.getElementById('car2'));
+ReactDOM.render(<Garage />, document.getElementById('garage'));
+ReactDOM.render(<Vehicle />, document.getElementById('container'));
+ReactDOM.render(<NewVehicle />, document.getElementById('container2'));
 
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-// serviceWorker.unregister();
+
