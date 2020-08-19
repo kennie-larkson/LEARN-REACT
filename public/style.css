@@ -77,8 +77,8 @@ html {
 .app_component {
     display: grid;
     /* padding: 1em; */
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-rows: 1fr 1fr 1fr;
     row-gap: 0.5em;
     column-gap: 0.5em;
     justify-items: center;
@@ -86,21 +86,57 @@ html {
 
 }
 
-.form-text{
-    color: rgb(14, 195, 14);
+.row_one {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 2em;
+    padding: 2em;
+    column-gap: 1em;
 }
 
-
-.paragraph_one {
-    grid-column-start: span 2;
+.col_one_row_one {
+    grid-column-start: span 1;
     grid-row-start: 1;
+    padding: 1em;
     /* padding: 0 0 0 0.5em;
     margin-left: 0.5em; */
 }
 
-.element_one {
+.col_two_row_one {
     grid-row-start: 1;
+    grid-column-start: 2;
 }
+
+.col_three_row_one {
+    grid-row-start: 1;
+    grid-column-start: 3;
+    padding: 1em;
+}
+
+.row_two {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 5em 0 2em 0;
+    background-color: white;
+    width: 100%;
+    /* justify-items: center; */
+    text-align: center;
+    padding: 2em 2em;
+}
+
+.row_three {
+    padding: 1em;
+    text-align: center;
+}
+
+.form-text {
+    color: rgb(14, 195, 14);
+}
+
+
+
+
+
 
 .footer_main {
     background-color: whitesmoke;
