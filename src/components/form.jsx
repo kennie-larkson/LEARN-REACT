@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import InputTag from "./input";
-// import Label from "./labels";
 import Button from "./button";
 
 function Form(props) {
+  const [isSignedUp, setIsSignedUp] = useState(false);
+
+  // useEffect(() => {
+  //   setIsSignedUp((isSignedUp) => (isSignedUp ? "Login" : "Sign up"));
+  // }, []);
+
+  function monitorStatus() {
+    setIsSignedUp((isSignedUp) => (isSignedUp ? "Login" : "Sign up"));
+  }
+
   return (
     <div className="form-container">
       <form>
@@ -21,14 +30,18 @@ function Form(props) {
 
         <div className="form-group ">
           <InputTag
-            className="form-control "
+            className="form-control"
             type="password"
             placeholder="enter your password"
           />
         </div>
-        <Button className="btn btn-primary" type="submit" text="Login" />
+        <Button
+          className="btn btn-primary"
+          type="submit"
+          text={isSignedUp ? "Login" : "Sign up"}
+          onClick={monitorStatus}
+        />
       </form>
-      {/* </div> */}
     </div>
   );
 }

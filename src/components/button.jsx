@@ -5,7 +5,7 @@ function Button(props) {
     <button
       className={props.className}
       type={props.type}
-      onClick={() => alert(`I have been clicked!`)}
+      onClick={props.onClick}
     >
       {props.text}
     </button>
