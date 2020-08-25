@@ -12,6 +12,8 @@ import Home from "./home";
 import Login from "./login";
 import About from "./about";
 import Signup from "./signup";
+import Dashboard from "./dashboard";
+import Transactions from "./transactions";
 import Button from "./button";
 
 export default function Navbar(props) {
@@ -34,11 +36,7 @@ export default function Navbar(props) {
               Login
             </Link>
           </li>
-          <li className="nav-item active">
-            {/* <Link className="nav-link" to="/signup">
-              <Button className="btn btn-primary" text="Sign up" />
-            </Link> */}
-          </li>
+          <li className="nav-item active"></li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input
@@ -53,7 +51,6 @@ export default function Navbar(props) {
         </form>
       </div>
 
-      
       <Switch>
         <Route path="/about">
           <About />
@@ -64,6 +61,12 @@ export default function Navbar(props) {
         <Route path="/signup">
           <Signup />
         </Route>
+        <Route path="/dashboard">
+          <Dashboard />
+        </Route>
+        {/* <Route path="/transactions">
+          <Transactions />
+        </Route> */}
         <Route path="/">
           <Home />
         </Route>
