@@ -14,7 +14,7 @@ function Form(props) {
   }
 
   return (
-    <div className="form-container">
+    <div className={props.className}>
       <form>
         <div className="form-group  ">
           <InputTag
@@ -36,9 +36,10 @@ function Form(props) {
           />
         </div>
         <Button
-          className="btn btn-primary"
-          type="submit"
-          text={isSignedUp ? "Login" : "Sign up"}
+          className="btn btn-primary btn-large"
+          type="button"
+          // text={isSignedUp ? "Login" : "Sign up"}
+          text = "Sign up"
           onClick={monitorStatus}
         />
       </form>
